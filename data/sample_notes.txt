@@ -1,0 +1,103 @@
+INTRODUCTION TO MACHINE LEARNING - LECTURE NOTES
+CS101, First Year, Semester 2
+
+------------------------------------------------------------
+UNIT 1: WHAT IS MACHINE LEARNING?
+------------------------------------------------------------
+
+Machine learning (ML) is a branch of artificial intelligence in which computers learn patterns from data instead of being explicitly programmed with rules. Arthur Samuel described it in 1959 as the field of study that gives computers the ability to learn without being explicitly programmed.
+
+In traditional programming, a developer writes rules and feeds in data to get answers. In machine learning, we feed in data and the expected answers, and the algorithm discovers the rules by itself. These learned rules are stored in a "model", which can then make predictions on new, unseen data.
+
+Everyday examples of machine learning:
+- Spam filters that decide whether an email is spam or not.
+- Recommendation systems on YouTube, Netflix and Spotify.
+- Face unlock on smartphones.
+- Voice assistants such as Google Assistant and Siri.
+- Fraud detection in credit card transactions.
+
+The three main types of machine learning are supervised learning, unsupervised learning and reinforcement learning.
+
+------------------------------------------------------------
+UNIT 2: KEY TERMINOLOGY
+------------------------------------------------------------
+
+Dataset: a collection of examples used to train and test a model. Each row is usually one example (also called a sample or an instance).
+
+Feature: a feature is an individual measurable property or input variable used by a model to make predictions. For example, when predicting house prices, features can be the area in square feet, the number of bedrooms, and the location. Features are the columns of the dataset that act as inputs. Choosing and creating good features is called feature engineering and has a large effect on model quality.
+
+Label (target): the output value we want the model to predict. In the house price example, the label is the price of the house.
+
+Training set and test set: the data is split into a training set, which the model learns from, and a test set, which is kept hidden during training and used to measure how well the model works on new data. A common split is 80% training and 20% testing.
+
+Model: the mathematical function learned from the training data that maps features to a prediction.
+
+------------------------------------------------------------
+UNIT 3: SUPERVISED LEARNING
+------------------------------------------------------------
+
+Supervised learning is a type of machine learning where the model is trained on labeled data. Every training example contains both the input features and the correct output label. The model learns the relationship between inputs and outputs, like a student learning with a teacher who provides the correct answers. After training, the model can predict labels for new, unseen inputs.
+
+Supervised learning problems are divided into two main categories: classification and regression.
+
+Classification:
+Classification is a supervised learning task where the output is a discrete category or class. The model decides which class an input belongs to. Examples include deciding whether an email is spam or not spam (binary classification), recognising handwritten digits from 0 to 9 (multi-class classification), and predicting whether a tumour is benign or malignant. Common classification algorithms are Logistic Regression, K-Nearest Neighbours (KNN), Decision Trees, Random Forests and Support Vector Machines (SVM). Classification models are often evaluated using accuracy, precision and recall.
+
+Regression:
+Regression is a supervised learning task where the output is a continuous numerical value. Instead of choosing a category, the model predicts a number. Examples include predicting the price of a house, forecasting tomorrow's temperature, and estimating a student's exam score from hours studied. The simplest regression algorithm is Linear Regression, which fits a straight line through the data. Regression models are commonly evaluated using Mean Squared Error (MSE) and Mean Absolute Error (MAE).
+
+Quick way to remember: if the answer is a category, it is classification; if the answer is a number, it is regression.
+
+------------------------------------------------------------
+UNIT 4: UNSUPERVISED LEARNING
+------------------------------------------------------------
+
+Unsupervised learning is a type of machine learning where the model is trained on unlabeled data. There are no correct answers provided. The algorithm tries to find hidden structure, patterns or groupings in the data on its own.
+
+Main tasks in unsupervised learning:
+- Clustering: grouping similar data points together. The most popular algorithm is K-Means. A business can use clustering to group customers into segments based on their buying behaviour.
+- Dimensionality reduction: reducing the number of features while keeping the important information. Principal Component Analysis (PCA) is a common technique and is useful for visualising high-dimensional data.
+- Anomaly detection: finding unusual data points, such as suspicious bank transactions.
+
+The main difference from supervised learning is that unsupervised learning has no labels, so we cannot directly measure accuracy against correct answers.
+
+------------------------------------------------------------
+UNIT 5: REINFORCEMENT LEARNING (BRIEF)
+------------------------------------------------------------
+
+In reinforcement learning, an agent learns by interacting with an environment. It takes actions and receives rewards or penalties, and its goal is to maximise the total reward over time. Examples include game-playing programs, robots learning to walk, and self-driving car research. This topic is covered in more depth in later semesters.
+
+------------------------------------------------------------
+UNIT 6: OVERFITTING AND UNDERFITTING
+------------------------------------------------------------
+
+Overfitting happens when a model learns the training data too well, including its noise and random fluctuations, so it performs very well on the training set but poorly on new, unseen data. An overfitted model has memorised the data rather than learned the general pattern. A typical sign is high training accuracy but much lower test accuracy.
+
+Common causes of overfitting: a model that is too complex for the amount of data, too little training data, and too many irrelevant features.
+
+Ways to reduce overfitting:
+- Collect more training data.
+- Use a simpler model.
+- Use regularisation (such as L1 or L2) to penalise complexity.
+- Use cross-validation to check performance on different splits of the data.
+- Remove irrelevant features.
+- Use early stopping when training neural networks.
+
+Underfitting is the opposite problem. The model is too simple to capture the pattern in the data, so it performs poorly on both the training set and the test set. Fixes include using a more powerful model or adding better features.
+
+The goal is a model that generalises well, meaning it balances between underfitting and overfitting.
+
+------------------------------------------------------------
+UNIT 7: TYPICAL MACHINE LEARNING WORKFLOW
+------------------------------------------------------------
+
+1. Define the problem.
+2. Collect the data.
+3. Clean and prepare the data (handle missing values, remove duplicates, scale features).
+4. Split the data into training and test sets.
+5. Choose a model and train it.
+6. Evaluate the model on the test set.
+7. Tune and improve the model.
+8. Deploy the model and monitor it.
+
+Popular Python libraries for machine learning: NumPy, Pandas, Matplotlib, scikit-learn, TensorFlow and PyTorch. For beginners, scikit-learn is the recommended starting point because it has simple, consistent tools for most classic algorithms.

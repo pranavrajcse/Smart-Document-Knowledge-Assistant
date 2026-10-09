@@ -71,10 +71,10 @@ The embedding model (~90 MB) is downloaded automatically the first time you load
 
 ```text
 GEMINI_API_KEY=your_real_key
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
-`GEMINI_MODEL` can be any Gemini model your key can access. If it is left as the placeholder, the app falls back to `gemini-2.5-flash`.
+`GEMINI_MODEL` can be any Gemini model your key can access. If it is left as the placeholder, the app falls back to `gemini-3.8-flash`.
 The `.env` file is ignored by git and the key is never shown in the app. The app starts without a key; you can add it later and just ask again.
 
 ## How to Run
